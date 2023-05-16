@@ -14,4 +14,27 @@ public class Pracownik {
         this.salary = salary;
         nextEmployeeID++;
     }
+
+    public int getEmployeeID() {
+        return employeeID;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", position='" + position + '\'' +
+                ", employeeID=" + employeeID +
+                ", salary=" + salary +
+                '}';
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
 }
