@@ -1,20 +1,30 @@
 package com.company;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
+
+import java.util.*;
 
 public class EmployeeManager {
-
     private final HashMap<Integer,Employee> employees;
 
     public EmployeeManager(HashMap<Integer, Employee> employees) {
         this.employees = employees;
     }
 
-    public  void addEmployee(Employee employee){
-        Integer keyEmployee = employee.getEmployeeID();
-        employees.put(keyEmployee,employee);
+    public void addEmployee() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Podaj imię pracownika: ");
+        String firstName = scanner.nextLine();
+        System.out.print("Podaj nazwisko pracownika: ");
+        String lastName = scanner.nextLine();
+        System.out.print("Podaj pozycję pracownika: ");
+        String position = scanner.nextLine();
+        System.out.print("Podaj zarobki pracownika: ");
+        int salary = scanner.nextInt();
+        scanner.nextLine();
+
+        Employee newEmployee = new Employee(firstName, lastName, position, salary);
+        int employeeID = newEmployee.getEmployeeID();
+        employees.put(employeeID, newEmployee);
+
     }
     public void removeEmployee(Employee employee){
         if(employees.containsKey(employee.getEmployeeID()))
@@ -57,6 +67,4 @@ public class EmployeeManager {
         }
         return employeeList;
     }
-
-
 }
