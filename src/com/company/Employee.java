@@ -1,6 +1,7 @@
 package com.company;
 
 public class Employee {
+
     private String firstName;
     private String lastName;
     private String position;
@@ -8,7 +9,7 @@ public class Employee {
     private int salary;
     private static int nextEmployeeID;
 
-    public Employee(String firstName, String lastName, String position,  int salary) {
+    public Employee(String firstName, String lastName, String position, int salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
@@ -16,13 +17,15 @@ public class Employee {
         this.salary = salary;
         nextEmployeeID++;
     }
-
     public int getEmployeeID() {
         return employeeID;
     }
 
     public String getPosition() {
         return position;
+    }
+    public int getSalary() {
+        return salary;
     }
 
     @Override
@@ -39,4 +42,6 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+    public void setPosition(String position) {this.position = position;}
 }
