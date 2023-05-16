@@ -1,4 +1,6 @@
-public class Pracownik {
+package com.company;
+
+public class Employee {
     private String firstName;
     private String lastName;
     private String position;
@@ -6,7 +8,7 @@ public class Pracownik {
     private int salary;
     private static int nextEmployeeID;
 
-    public Pracownik(String firstName, String lastName, String position, int employeeID, int salary) {
+    public Employee(String firstName, String lastName, String position, int employeeID, int salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
