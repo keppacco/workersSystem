@@ -24,6 +24,11 @@ public class Employee {
     public String getPosition() {
         return position;
     }
+
+    public String getLastName()
+    {
+        return lastName;
+    }
     public int getSalary() {
         return salary;
     }

@@ -64,7 +64,7 @@ public class EmployeeManager {
         while(employeeIterator.hasNext())
         {
             Employee employee = employeeIterator.next();
-            if(!employee.getPosition().equals(lastName))
+            if(!employee.getLastName().equals(lastName))
                 employeeIterator.remove();
         }
         return employeeList;
